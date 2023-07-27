@@ -10,7 +10,6 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 while(source.isOpened()):
 	# Load the image and convert it to grayscale
 	ret, image = source.read()
-	#gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 	# Calculate the Laplacian variance
 	laplacian = cv2.Laplacian(image, cv2.CV_64F)
