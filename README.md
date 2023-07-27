@@ -1,1 +1,7 @@
-# Blur-detection-with-pynq-board
+# Blur Detection with Pynq Z2 Board
+This repository contains the Python program for blur detection in images. The codes mainly utilize the OpenCV Python library that enables us to perfom image image processing operations such as edge-detection, image-resizing, image-manipulation. One such use is detecting blur in images. This operation can be put to use in surveillance, autonomous vehicles, and robotics.
+The project uses a Pynq Z2 board to execute all the programs written in python. The codes and the sample images were loaded into a micro SD card which was inserted in the board.
+The project uses the concept of a laplacian filter to return the "variance" of the image matrix. This obtained variance value is then compared to the "threshold" value specified by the user in the program itself. If the value of variance is less than that of the threshold, the image is declared as blurred.
+The `blur-images-sorting.py` file is a simple code that displays the words "Blur" or "Sharp" on the image to tell whether those images are  blurred or clear. This code uses the `matplotlib` library to help display the images and the `os` library to help read the images from the `test_images` folder on your system that contains a mix of vivid and unfocused images.
+The last file, `real-time-blur-detection.py`, consists of the code to detect in real-time the "haziness" in the video stream. This is indicated by a flashing "Blur!!!" message on the user screen when unclear live-stream is detected. The `cv2.VideoCapture(0)` enables capturing the video stream live from the camera.
+The `Report-pynq-board-G5.pdf` contains the detailed information and all the know-hows of the project. 
